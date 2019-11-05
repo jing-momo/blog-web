@@ -7,6 +7,9 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  passwordVisible
+  password
+  checked
 
   constructor() { }
 

@@ -1,35 +1,6 @@
-/*.loginImag{*/
-/*  left:50%;*/
-/*  top:20%;*/
-/*  height: 400px;*/
-/*  width: 350px;*/
-/*  position: absolute;*/
-/*  background-size: cover;*/
-/*  border-radius: 10px;*/
-/*}*/
-/*.loginImag-1{*/
-/*  height: 368px;*/
-/*  margin-top: 32px;*/
-/*  background-color: #f7f7f7;*/
-/*  background-size: cover;*/
-/*  position: relative;*/
-/*  overflow: hidden;*/
-/*  border-radius: 10px;*/
-/*}*/
-/*.image1{*/
-/*  height: 64px;*/
-/*  width: 64px;*/
-/*  border-radius: 50%;*/
-/*  background-color: #9d9d9d;*/
-/*}*/
-/*.loginImag-2{*/
-/*  margin-top: 0px;*/
-/*  margin-left: 143px;*/
-/*  position: relative;*/
-/*}*/
-.loginImag{
-  left:50%;
-  top:20%;
+.loginImag {
+  left: 50%;
+  top: 20%;
   height: 400px;
   width: 350px;
   position: absolute;
@@ -37,7 +8,8 @@
   background-color: white;
   border-radius: 10px;
 }
-.image1{
+
+.image1 {
   height: 64px;
   width: 64px;
   border-radius: 50%;
@@ -46,3 +18,9 @@
   top: -30px;
   left: 40%;
 }
+
+.ant-input {
+  padding: 0px;
+  height: 40px;
+}
+
