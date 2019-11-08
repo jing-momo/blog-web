@@ -1,7 +1,7 @@
 
 <div class="bgImg" style="overflow: auto;">
   <div class="loginImag" *ngIf="login==false">
-    <nz-avatar [nzSize]="64" nzIcon="user" style=" position: absolute;top: -30px;left: 40%;"></nz-avatar>
+    <nz-avatar [nzSize]="64" nzIcon="user" style=" position: absolute;top: -30px;left: 40%;" [nzSrc]="picture"></nz-avatar>
     <div style="text-align: right">
       <i nz-icon nzType="close-circle" nzTheme="outline" style="margin-right: 0px;height: 20px;width: 20px;color: silver"></i>
     </div>
@@ -12,7 +12,7 @@
     <div style="padding-left: 50px">
       <div style="height: 50px;width: 250px;padding: 0px">
         <nz-input-group [nzSuffix]="suffixTemplateInfo" [nzPrefix]="prefixTemplateUser">
-          <input  type="text" nz-input placeholder="请输入用户名" />
+          <input  type="text" nz-input [(ngModel)]="loginusername" placeholder="请输入用户名" />
         </nz-input-group>
         <ng-template #prefixTemplateUser><i nz-icon nzType="user"></i></ng-template>
         <ng-template #suffixTemplateInfo
@@ -25,7 +25,7 @@
             [type]="passwordVisible ? 'text' : 'password'"
             nz-input
             placeholder="请输入密码 "
-            [(ngModel)]="password"
+            [(ngModel)]="loginpassword"
           />
         </nz-input-group>
         <ng-template #prefixTemplatePassword><i nz-icon nzType="lock" nzTheme="outline"></i></ng-template>
@@ -42,8 +42,9 @@
     </div>
 <!--    登录-->
     <div style="text-align: center;margin-top: 20px">
+      <p style="font-size: 5px;color: red">{{description}}</p>
       <div style="border-radius: 20px;background-color: #5cb85c;height: 42px;width: 250px;margin-left: 50px;">
-        <p style="color: #e5e5e5;font-size: larger;line-height: 40px;">登录</p>
+        <p style="color: #e5e5e5;font-size: larger;line-height: 40px;" (click)="loginUsername()">登录</p>
       </div>
     </div>
     <div style="margin-top: 20px">
@@ -92,7 +93,7 @@
       <label nz-checkbox [(ngModel)]="checked" style="padding-left: 50px">同意<span style="color: #46b8da">《蜘蛛网协议》</span></label>
       <a style="color: #5cb85c;padding-left: 35px" (click)="prompLogin2()">立即登录</a>
     </div>
-    <!--    登录-->
+    <!--    注册-->
     <div style="text-align: center;margin-top: 20px">
       <div style="border-radius: 20px;background-color: #5cb85c;height: 42px;width: 250px;margin-left: 50px;" (click)="register()">
         <a style="color: #e5e5e5;font-size: larger;line-height: 40px;">注册</a>

@@ -9,12 +9,14 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { FormLoginComponent } from './form-login/form-login.component';
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    FormLoginComponent,
   ],
   imports: [
     BrowserModule,
