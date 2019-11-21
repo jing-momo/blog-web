@@ -11,61 +11,63 @@ import {UrlConfig} from '../urlConfig/UrlConfig';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  // 登陆的账号密码
   loginusername: string;
-  login = false;
-  passwordVisible;
   loginpassword: string;
+  // 验证是登录页面还是注册页面
+  login = true;
+  passwordVisible;
+
   checked = true;
   registerPwd: string;
   registerUserName: string;
   picture: string;
   description: string;
+  registercode = false;
 
   constructor(private api: GlobalhttpService) {
   }
 
   ngOnInit() {
-    this.login = false;
+    // this.login = false;
     this.loginusername = localStorage.getItem('loginusername');
     this.loginpassword = localStorage.getItem('loginpassword');
     this.picture = localStorage.getItem('picture');
+    console.log(this.picture);
   }
 
 
-//  点击立即注册
-  prompLogin() {
-    this.login = true;
-  }
+// //  点击立即注册
+//   prompLogin() {
+//     this.registercode = true;
+//   }
 
-//  点击立即登录
-  prompLogin2() {
-    this.login = false;
-  }
 
 // 注册
-  register() {
-    const url = UrlConfig.getLoginUser;
-    const param = {
-      username: this.registerUserName,
-      password: Md5.hashStr(this.registerPwd).toString()
-    };
-    this.api.postForData(url, param).then(
-      data => {
-        if (data.returnCode === 0) {
-          alert('注册成功');
-        } else {
-          alert('注册失败');
-        }
-      },
-      err => {
-        console.log(err);
-        alert('注册失败');
-      }
-    );
-  }
+//   register() {
+//     const url = UrlConfig.getLoginUser;
+//     const param = {
+//       username: this.registerUserName,
+//       password: Md5.hashStr(this.registerPwd).toString()
+//     };
+//     this.api.postForData(url, param).then(
+//       data => {
+//         if (data.returnCode === 0) {
+//           alert('注册成功');
+//         } else {
+//           alert('注册失败');
+//         }
+//       },
+//       err => {
+//         console.log(err);
+//         alert('注册失败');
+//       }
+//     );
+//   }
 
 // 出现头像
   loginUsername() {
+    this.registercode = true;
     const url = UrlConfig.redirectLogin + '?username=' + this.loginusername + '&password=' + this.loginpassword;
     const param = {
       username: this.loginusername,
@@ -83,6 +85,7 @@ export class LoginComponent implements OnInit {
             localStorage.removeItem('loginpassword');
           }
           this.picture = data.result.image;
+          console.log(data.result.image);
         } else {
           console.log('账号或密码错误');
         }
@@ -91,6 +94,10 @@ export class LoginComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  acceptStatus(ele: any) {
+    this.login = ele.login;
   }
 
 
