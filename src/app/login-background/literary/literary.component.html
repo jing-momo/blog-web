@@ -1,0 +1,140 @@
+<div>
+<!-- 右上角写文章-->
+  <div class="witewite">
+    <a class="write write-btn">
+      <i class="iconfont icon-qianbi"></i>写文章
+    </a>
+  </div>
+<!--  用户头像-->
+  <div  class="usertouxiang">
+    <a class="avatar">
+      <i class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui sanjiao"></i>
+      <img [src]="picture" class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui" alt="" />
+    </a>
+    <div class="downkuang">
+      <ul class="xlakuang">
+        <li>
+          <a style="height: 50px;width: 160px">
+          <i class="iconfont icon-wodedangxuan "></i>
+          <span>我的主页</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-icon_favorite "></i>
+          <span>收藏的文章</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-xihuan "></i>
+          <span>喜欢的文章</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-fufei "></i>
+          <span>已购内容</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-qianbao "></i>
+          <span>我的钱包</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-shezhi1 "></i>
+          <span>设置</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-fankui1 "></i>
+          <span>帮助与反馈</span>
+          </a>
+        </li>
+        <li>
+          <a>
+          <i class="iconfont icon-tuichu "></i>
+          <span>退出</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- 左上角 -->
+  <div>
+  <ul nz-menu nzMode="horizontal" id="menu">
+    <li style="margin-left: 0px;margin-right: 70px">
+      <a class="logo" href="/">
+        <img src="assets/img/logo2.png">
+      </a>
+    </li>
+    <li  class="sbiaoti">
+      <a [routerLink]="['/', 'components', 'menu', 'zh']">发现</a>
+    </li>
+    <li  class="sbiaoti">
+      <a [routerLink]="['/', 'components', 'menu', 'zh']">关注</a>
+    </li>
+<!--    (mouseenter)="isOpen=true" (mouseleave)="isOpen=false"-->
+    <li class="sbiaoti">
+      <a [routerLink]="['/', 'components', 'menu', 'zh']" >消息</a>
+      <ul class="dropdown-menu" id="test" *ngIf="isOpen">
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-pinglun2 tubiao"></i>
+            <span>评论</span>
+          </a>
+        </li>
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-xinfeng tubiao"></i>
+            <span>简信</span>
+          </a>
+        </li>
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-fuwuqingqiu tubiao"></i>
+            <span>投稿请求</span>
+          </a>
+
+        </li>
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-xihuan2 tubiao"></i>
+          <span>喜欢和赞</span>
+        </a>
+        </li>
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-yiguanzhu tubiao"></i>
+          <span>关注</span>
+        </a>
+        </li>
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-jiachang_goumaijihuo tubiao"></i>
+            <span>赞赏和付费</span>
+        </a>
+        </li>
+        <li class="dropdown-menu-li">
+          <a>
+            <i class="iconfont icon-ellipsis2 tubiao"></i>
+          <span>其他</span>
+        </a>
+        </li>
+      </ul>
+    </li>
+    <li class="search">
+      <form>
+        <label>
+          <input type="text" class="search-input" placeholder="搜索" style="font-weight:lighter">
+          <a class="search-btn"> <i class="icon iconfont icon-magnifier" style="color: rgba(38,31,21,0.44)"></i></a>
+        </label>
+      </form>
+    </li>
+  </ul>
+</div>
+</div>

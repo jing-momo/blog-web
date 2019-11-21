@@ -1,0 +1,23 @@
+.shezhi{
+  margin-top: 150px;
+  width: 220px;
+  border-radius: 50%;
+  animation:mymove 3s infinite ease;
+
+}
+
+@keyframes mymove
+{
+  0% {
+    width: 70px;
+    height:70px;
+  }
+  50% {
+    width: 100px;
+    height:100px;
+  }
+  100% {
+    width: 70px;
+    height:70px;
+  }
+}

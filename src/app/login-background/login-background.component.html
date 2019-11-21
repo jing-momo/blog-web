@@ -1,0 +1,23 @@
+<div>
+  <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+  <div style="height:100px;width:100%;text-align: center">
+    <nz-avatar  class="shezhi" [nzSize]="64" nzIcon="user" [nzShape]="'circle'"
+               [nzSrc]="picture"></nz-avatar>
+<!--    <img src="assets/userLogo.jpeg" class="shezhi">-->
+  </div>
+  <div style="height:100%;width:100%;text-align: center;padding-top: 180px;">
+    <p>
+      <a style="margin-right: 20px;font-size: 20px" routerLink="/homepages/literary">文章</a>
+      <a style="margin-right: 20px;font-size: 20px" href="https://github.com/TaleLin">项目</a>
+      <a style="margin-right: 20px;font-size: 20px" href="https://github.com/TaleLin">gitHub</a>
+      <a style="margin-right: 20px;font-size: 20px" href="https://juejin.im/">掘金</a>
+      <a style="margin-right: 20px;font-size: 20px" href="https://www.zhihu.com/">知乎</a>
+      <a style="margin-right: 20px;font-size: 20px" href="https://segmentfault.com/">segmentfault</a>
+      <a style="margin-right: 20px;font-size: 20px" href="https://www.jianshu.com/users/dd578254e5f4/following">简书</a>
+    </p>
+    <p style="margin-top: 20px;font-size: 23px">时光正好，未来可期！</p>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
