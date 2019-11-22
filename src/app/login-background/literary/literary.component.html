@@ -6,68 +6,70 @@
     </a>
   </div>
 <!--  用户头像-->
-  <div  class="usertouxiang">
+  <div  class="usertouxiang clearfix"  (mouseenter)="titleisopen=true">
+    <div class="usertouxiang1">
     <a class="avatar">
       <i class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui sanjiao"></i>
       <img [src]="picture" class="iconfont icon-zelvxuanzefeiyongdaosanjiaoxingfandui" alt="" />
-    </a>
-    <div class="downkuang">
-      <ul class="xlakuang">
-        <li>
-          <a style="height: 50px;width: 160px">
-          <i class="iconfont icon-wodedangxuan "></i>
+    </a></div>
+<!--    <div class="downkuang">-->
+    <ng-container  class="clearfix"   *ngIf="titleisopen" >
+    <ul class="xlakuang " (mouseleave)="titleisopen=false">
+      <li class="title-mune">
+        <a style="height: 50px;width: 160px">
+          <i class="iconfont iconfont1 icon-wodedangxuan "></i>
           <span>我的主页</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-icon_favorite "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-icon_favorite "></i>
           <span>收藏的文章</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-xihuan "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-xihuan "></i>
           <span>喜欢的文章</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-fufei "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-fufei "></i>
           <span>已购内容</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-qianbao "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-qianbao "></i>
           <span>我的钱包</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-shezhi1 "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-shezhi1 "></i>
           <span>设置</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-fankui1 "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-fankui1 "></i>
           <span>帮助与反馈</span>
-          </a>
-        </li>
-        <li>
-          <a>
-          <i class="iconfont icon-tuichu "></i>
+        </a>
+      </li>
+      <li class="title-mune">
+        <a>
+          <i class="iconfont iconfont1 icon-tuichu "></i>
           <span>退出</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+        </a>
+      </li>
+    </ul>
+    </ng-container>
   </div>
 <!-- 左上角 -->
   <div>
   <ul nz-menu nzMode="horizontal" id="menu">
-    <li style="margin-left: 0px;margin-right: 70px">
+    <li style="margin-left: 0;margin-right: 70px">
       <a class="logo" href="/">
         <img src="assets/img/logo2.png">
       </a>
@@ -79,49 +81,49 @@
       <a [routerLink]="['/', 'components', 'menu', 'zh']">关注</a>
     </li>
 <!--    (mouseenter)="isOpen=true" (mouseleave)="isOpen=false"-->
-    <li class="sbiaoti">
+    <li class="sbiaoti" (mouseenter)="isOpen=true" (mouseleave)="isOpen=false">
       <a [routerLink]="['/', 'components', 'menu', 'zh']" >消息</a>
       <ul class="dropdown-menu" id="test" *ngIf="isOpen">
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-pinglun2 tubiao"></i>
+            <i class="iconfont iconfont1 icon-pinglun2 tubiao"></i>
             <span>评论</span>
           </a>
         </li>
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-xinfeng tubiao"></i>
+            <i class="iconfont iconfont1 icon-xinfeng tubiao"></i>
             <span>简信</span>
           </a>
         </li>
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-fuwuqingqiu tubiao"></i>
+            <i class="iconfont iconfont1 icon-fuwuqingqiu tubiao"></i>
             <span>投稿请求</span>
           </a>
 
         </li>
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-xihuan2 tubiao"></i>
+            <i class="iconfont iconfont1 icon-xihuan2 tubiao"></i>
           <span>喜欢和赞</span>
         </a>
         </li>
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-yiguanzhu tubiao"></i>
+            <i class="iconfont iconfont1 icon-yiguanzhu tubiao"></i>
           <span>关注</span>
         </a>
         </li>
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-jiachang_goumaijihuo tubiao"></i>
+            <i class="iconfont iconfont1 icon-jiachang_goumaijihuo tubiao"></i>
             <span>赞赏和付费</span>
         </a>
         </li>
         <li class="dropdown-menu-li">
           <a>
-            <i class="iconfont icon-ellipsis2 tubiao"></i>
+            <i class="iconfont iconfont1 icon-ellipsis2 tubiao"></i>
           <span>其他</span>
         </a>
         </li>
@@ -136,5 +138,30 @@
       </form>
     </li>
   </ul>
+</div>
+</div>
+<!--中间内容-->
+<div style="margin-top: 20px">
+
+
+<div class="col-xs-7">
+
+</div>
+<!--右侧图片  会员-->
+<div class="col-xs-5">
+<div class="right-img">
+  <a href="#">
+    <img src="//cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png">
+  </a>
+  <a href="#">
+    <img src="//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png">
+  </a>
+  <a href="#">
+    <img src="//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png">
+  </a>
+  <a href="#">
+    <img src="//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png">
+  </a>
+</div>
 </div>
 </div>

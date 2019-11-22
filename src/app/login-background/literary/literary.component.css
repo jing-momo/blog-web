@@ -76,7 +76,7 @@ li.sbiaoti :visited{
 /*  margin-left: 15px;*/
 /*  vertical-align: middle;*/
 /*}*/
-.iconfont{
+.iconfont1{
   font-size: 20px;
   color: #ea6f5a;
   margin-right: 20px;
@@ -129,10 +129,18 @@ form{
   margin-right: 0;
 }
 .usertouxiang{
-  height: 40px;
+  height: 57px;
   line-height: 57px;
-  border-radius: 50%;
   float: right;
+  position: relative;
+  right: -10px;
+  width: 80px;
+}
+.usertouxiang a{
+  display: block;
+}
+div.usertouxiang:hover{
+  background: #eeeeee;
 }
 .sanjiao{
   color: #8c8c8c;
@@ -149,32 +157,56 @@ form{
   vertical-align: center;
   float: left;
 }
-.downkuang{
-  top:0;
-  width: 160px;
-  height: auto;
-  border: 1px solid rgba(0, 0, 0, .15);
-}
+/*.downkuang{*/
+/*  top:0;*/
+/*  width: 160px;*/
+/*  height: auto;*/
+/*  border: 1px solid rgba(0, 0, 0, .15);*/
+/*}*/
 .xlakuang{
   position: relative;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  margine-top:-3px;
+  width: 160px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, .15);
 }
 .xlakuang li{
   width: 160px;
   height: 50px;
   line-height: 50px;
 }
-
+/*.xlakuang li :hover{*/
+/*  width: 160px;*/
+/*  height: 50px;*/
+/*  line-height: 50px;*/
+/*  background: #eeeeee;*/
+/*}*/
 .xlakuang li a{
-  width: 160px!important;
+  width: 158px!important;
   height: 50px!important;
   line-height: 50px;
   color: black;
+  display: block;
 }
-.xlakuang li :hover{
-  background: #eeeeee;
-  width: 160px;
+.title-mune :hover{
+  width: 158px;
   height: 50px;
+  line-height: 50px;
+  background: #eeeeee;
+}
+.title-drop-mune{
+  margin-top: 57px;
+}
+.right-img{
+  width: 280px;
+  height: 228px;
+}
+.right-img img{
+  margin: 0 0 6px;
+  height: 50px;
+  width: 280px;
+  display: block;
 }

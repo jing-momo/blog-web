@@ -6,7 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./literary.component.css']
 })
 export class LiteraryComponent implements OnInit {
-  isOpen = true;
+  isOpen = false;
+  titleisopen = false;
   picture = localStorage.getItem('picture');
 
   constructor() {
